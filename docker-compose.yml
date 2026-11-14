@@ -1,0 +1,8 @@
+services:
+  wingly:
+    build: .
+    ports: ["8686:8686"]
+    volumes:
+      - ./data:/data
+      - /path/to/your/media:/media:ro   # then add /media/... as a library in Settings
+    restart: unless-stopped
